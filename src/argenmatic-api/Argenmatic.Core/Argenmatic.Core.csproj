@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Argenmatic.SharedKernel\Argenmatic.SharedKernel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ProjectAggregate\Entities\" />
+    <Folder Include="ProjectAggregate\Events\" />
+    <Folder Include="ProjectAggregate\EventHandlers\" />
+    <Folder Include="ProjectAggregate\Commands\" />
+    <Folder Include="ProjectAggregate\Queries\" />
+  </ItemGroup>
+
+</Project>
