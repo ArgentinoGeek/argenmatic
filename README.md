@@ -1,4 +1,5 @@
 # 👑 Argenmatic
+[![.NET](https://github.com/ArgentinoGeek/argenmatic/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ArgentinoGeek/argenmatic/actions/workflows/dotnet.yml)
 ## 😷 Overview
 Argenmatic is a web-based project that you can use to create a resume or curriculum vitae by dragging and dropping. You don't need to create an account, but it is definitely recommendable so you can use all the features that it provides 😍.
 
