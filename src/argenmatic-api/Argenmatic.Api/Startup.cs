@@ -31,7 +31,6 @@ namespace Argenmatic.Api
             });
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
-
             services.AddDbContext(connectionString);
 
             services.AddControllers();
