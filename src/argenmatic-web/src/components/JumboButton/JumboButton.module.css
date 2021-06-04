@@ -44,3 +44,22 @@ a {
 .buttonSecondary:hover {
     background-color: #b7dbff;
 }
+
+.primaryTextAlternated {
+    display: block;
+    color: #333333;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 35pt;
+}
+
+.secondaryTextAlternated {
+    display: block;
+    color: #666666;
+    text-transform: lowercase;
+    font-style: italic;
+    text-align: right;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 25pt;
+}
