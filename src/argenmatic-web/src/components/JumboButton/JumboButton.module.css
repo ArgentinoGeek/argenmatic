@@ -1,0 +1,65 @@
+a {
+    text-decoration: none;
+}
+
+.button {
+    display: block;
+    background-color: #0984E3;
+    padding: 3rem 25%;
+    border-radius: 25px;
+    margin: 25px;
+}
+
+.button:hover {
+    background-color: #095fa1;
+}
+
+.primaryText {
+    display: block;
+    color: #E1E1E1;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 35pt;
+}
+
+.secondaryText {
+    display: block;
+    color: #C5C5C5;
+    text-transform: lowercase;
+    font-style: italic;
+    text-align: right;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 25pt;
+}
+
+.buttonSecondary {
+    background-color: #74B9FF;
+    display: block;
+    padding: 3rem 25%;
+    border-radius: 25px;
+    margin: 25px;
+}
+
+.buttonSecondary:hover {
+    background-color: #b7dbff;
+}
+
+.primaryTextAlternated {
+    display: block;
+    color: #333333;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 35pt;
+}
+
+.secondaryTextAlternated {
+    display: block;
+    color: #666666;
+    text-transform: lowercase;
+    font-style: italic;
+    text-align: right;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 25pt;
+}

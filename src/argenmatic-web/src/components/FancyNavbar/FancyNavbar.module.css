@@ -32,39 +32,39 @@
     color: #e6e6e6;
 }
 
-.menu-item {
+.menuItem {
     margin: 5px;
 }
 
-.menu-item a {
+.menuItem a {
     color: #ffffff;
     text-decoration: none;
     font-family: "Roboto", sans-serif;
     font-weight: 100;
 }
 
-.menu-item a:hover {
+.menuItem a:hover {
     text-decoration: underline;
 }
 
-.button-primary {
+.buttonPrimary {
     background-color: #0984E3;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.button-primary:hover {
+.buttonPrimary:hover {
     text-decoration: none!important;
     background-color: #095fa1;
 }
 
-.button-secondary {
+.buttonSecondary {
     border: 1px solid #707070;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.button-secondary:hover {
+.buttonSecondary:hover {
     text-decoration: none!important;
     background-color: #707070;
 }
