@@ -1,18 +1,18 @@
 .card {
-    background-color: #D1D1D1;
-    border: 1px solid #707070;
-    font-family: "Roboto", sans-serif;
-    padding: 20px;
-    margin-bottom: 20px;
+  background-color: #d1d1d1;
+  border: 1px solid #707070;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .title {
-    display: block;
-    font-weight: bolder;
-    font-size: 25pt;
-    margin-bottom: 20px;
+  display: block;
+  font-weight: bolder;
+  font-size: 25pt;
+  margin-bottom: 20px;
 }
 
 .content {
-    display: block;
+  display: block;
 }
