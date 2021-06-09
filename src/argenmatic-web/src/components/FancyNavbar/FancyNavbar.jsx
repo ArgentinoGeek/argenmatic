@@ -1,7 +1,7 @@
 import styles from './FancyNavbar.module.css';
 
 const FancyNavbar = () => {
-    return(
+    return (
         <nav className={styles.Navbar}>
             <ul className={styles.menu}>
                 <div className={styles.logo}><a href="/">Argenmatic</a></div>

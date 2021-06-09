@@ -1,7 +1,7 @@
 import styles from './Header.module.css';
 import background from '../../img/papers.jpg';
 
-const Header = ({resumesCreated}) => {
+const Header = ({ resumesCreated }) => {
     return (
         <div className={styles.header}>
             <img src={background} alt="Backgound papers" />

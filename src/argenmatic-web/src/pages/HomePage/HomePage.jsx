@@ -13,31 +13,31 @@ const HomePage = () => {
     return (
         <div>
             <FancyNavbar />
-      <Header resumesCreated={120587452} />
-      <JumboButton
-      primaryText="Create a resume"
-      secondaryText="For free"
-      destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
-      isPrimary={false}
-       />
-       <JumboButton
-      primaryText="Log in"
-      secondaryText="to save your information"
-      destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
-      isPrimary={true}
-       />
-       <Card title="About">
-        {"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices ut sem vel vestibulum. Mauris vel lacus et sapien egestas faucibus. In eu magna turpis. Donec in nunc a mauris lacinia egestas sit amet id velit. Nulla et quam sit amet augue feugiat hendrerit. Vestibulum gravida et felis nec interdum. Suspendisse potenti. Phasellus a purus ornare, placerat erat fermentum, efficitur eros. Fusce molestie magna nulla, sed eleifend erat euismod id. Vestibulum non gravida eros. Donec interdum pellentesque tellus eu mattis. Vestibulum posuere tristique cursus."}
-       </Card>
+            <Header resumesCreated={120587452} />
+            <JumboButton
+                primaryText="Create a resume"
+                secondaryText="For free"
+                destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
+                isPrimary={false}
+            />
+            <JumboButton
+                primaryText="Log in"
+                secondaryText="to save your information"
+                destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
+                isPrimary={true}
+            />
+            <Card title="About">
+                {"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices ut sem vel vestibulum. Mauris vel lacus et sapien egestas faucibus. In eu magna turpis. Donec in nunc a mauris lacinia egestas sit amet id velit. Nulla et quam sit amet augue feugiat hendrerit. Vestibulum gravida et felis nec interdum. Suspendisse potenti. Phasellus a purus ornare, placerat erat fermentum, efficitur eros. Fusce molestie magna nulla, sed eleifend erat euismod id. Vestibulum non gravida eros. Donec interdum pellentesque tellus eu mattis. Vestibulum posuere tristique cursus."}
+            </Card>
 
-       <Card title="Pricing">
-          <JumboButton
-             primaryText="Log in"
-             secondaryText="to save your information"
-             destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
-             isPrimary={true}
-          />
-       </Card>
+            <Card title="Pricing">
+                <JumboButton
+                    primaryText="Log in"
+                    secondaryText="to save your information"
+                    destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
+                    isPrimary={true}
+                />
+            </Card>
         </div>
     );
 }
