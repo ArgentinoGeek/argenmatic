@@ -1,42 +1,42 @@
 .header {
-    position: relative;
-    background-color: #FFFFFF;
-    height: 15rem;
-    overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+  height: 15rem;
+  overflow: hidden;
 }
 
 .header > img {
-    background-size: cover;
-    filter: blur(3px);
-    width: 100%;
+  background-size: cover;
+  filter: blur(3px);
+  width: 100%;
 }
 
 .content {
-    margin: 0;
-    position: absolute;
-    z-index: 1;
-    top: 25%;
-    left: 25%;
-    right: 0;
-    max-width: 50vw;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 25%;
+  right: 0;
+  max-width: 50vw;
 }
 
 .resumesCount {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-size: 35pt;
-    font-weight: bolder;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 35pt;
+  font-weight: bolder;
 }
 
 .label {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-size: 22pt;
-    font-style: italic;
-    font-weight: 100;
-    text-transform: lowercase;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 22pt;
+  font-style: italic;
+  font-weight: 100;
+  text-transform: lowercase;
 }
