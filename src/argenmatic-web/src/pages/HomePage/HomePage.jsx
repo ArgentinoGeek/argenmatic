@@ -17,13 +17,13 @@ const HomePage = () => {
             <JumboButton
                 primaryText="Create a resume"
                 secondaryText="For free"
-                destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
+                destinationUrl="/"
                 isPrimary={false}
             />
             <JumboButton
                 primaryText="Log in"
                 secondaryText="to save your information"
-                destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
+                destinationUrl="/login"
                 isPrimary={true}
             />
             <Card title="About">
@@ -31,10 +31,11 @@ const HomePage = () => {
             </Card>
 
             <Card title="Pricing">
+                <a href="#pricing"></a>
                 <JumboButton
                     primaryText="Log in"
                     secondaryText="to save your information"
-                    destinationUrl="https://github.com/ArgentinoGeek/argenmatic"
+                    destinationUrl="/login"
                     isPrimary={true}
                 />
             </Card>
