@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+// eslint-disable-next-line
 import styles from './HomePage.module.css';
 import FancyNavbar from '../../components/FancyNavbar/FancyNavbar';
 import Header from '../../components/Header/Header';
@@ -31,7 +32,6 @@ const HomePage = () => {
             </Card>
 
             <Card title="Pricing">
-                <a href="#pricing"></a>
                 <JumboButton
                     primaryText="Log in"
                     secondaryText="to save your information"

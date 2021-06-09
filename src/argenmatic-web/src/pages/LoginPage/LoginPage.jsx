@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+// eslint-disable-next-line
 import styles from './LoginPage.module.css';
 import FancyNavbar from '../../components/FancyNavbar/FancyNavbar';
 
