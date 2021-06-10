@@ -1,0 +1,15 @@
+.bodyContainer {
+  padding: 0 4rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  flex-basis: 50%;
+  margin: 3rem 1rem;
+}
