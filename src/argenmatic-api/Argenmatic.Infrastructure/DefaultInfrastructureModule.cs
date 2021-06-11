@@ -3,6 +3,8 @@ using Argenmatic.Infrastructure.Data;
 using Argenmatic.Infrastructure.Implementations;
 using Argenmatic.SharedKernel.Interfaces;
 using Autofac;
+using DinkToPdf;
+using DinkToPdf.Contracts;
 using MediatR;
 using MediatR.Pipeline;
 using System.Collections.Generic;
@@ -75,8 +77,10 @@ namespace Argenmatic.Infrastructure
                 .AsImplementedInterfaces();
             }
 
-            builder.RegisterType<EmailSender>().As<IEmailSender>()
-                .InstancePerLifetimeScope();
+            builder.RegisterType<EmailSender>().As<IEmailSender>().InstancePerLifetimeScope();
+            builder.RegisterType<PdfService>().As<IPdfService>().InstancePerLifetimeScope();
+            builder.RegisterType<EmailSender>().As<IEmailSender>().InstancePerLifetimeScope();
+            builder.RegisterInstance<IConverter>(new SynchronizedConverter(new PdfTools()));
         }
 
         private void RegisterDevelopmentOnlyDependencies(ContainerBuilder builder)

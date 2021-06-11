@@ -12,7 +12,6 @@
     <Folder Include="ProjectAggregate\Entities\" />
     <Folder Include="ProjectAggregate\Events\" />
     <Folder Include="ProjectAggregate\EventHandlers\" />
-    <Folder Include="ProjectAggregate\Commands\" />
     <Folder Include="ProjectAggregate\Queries\" />
   </ItemGroup>
 

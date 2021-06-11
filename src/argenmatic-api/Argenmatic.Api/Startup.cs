@@ -1,3 +1,4 @@
+using Argenmatic.Api.wkhtmltox;
 using Argenmatic.Infrastructure;
 using Autofac;
 using Microsoft.AspNetCore.Builder;
@@ -6,6 +7,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using System;
+using System.IO;
 
 namespace Argenmatic.Api
 {
@@ -32,6 +35,11 @@ namespace Argenmatic.Api
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext(connectionString);
+
+            var architectureFolder = (IntPtr.Size == 8) ? "64 bit" : "32 bit";
+            var wkHtmlToPdfPath = Path.Combine(_env.ContentRootPath, $"wkhtmltox\\v0.12.4\\{architectureFolder}\\libwkhtmltox");
+            CustomAssemblyLoadContext context = new CustomAssemblyLoadContext();
+            context.LoadUnmanagedLibrary(wkHtmlToPdfPath);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
