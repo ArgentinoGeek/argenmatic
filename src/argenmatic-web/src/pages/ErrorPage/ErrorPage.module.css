@@ -1,0 +1,14 @@
+.errorContainer {
+  display: block;
+  background-color: darkblue;
+  height: 100vw;
+  color: white;
+  font-family: monospace;
+  padding: 5rem;
+}
+
+.sign {
+  font-style: italic;
+  color: yellow;
+  text-align: right;
+}
