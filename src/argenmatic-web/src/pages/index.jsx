@@ -11,9 +11,9 @@ const Webpages = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="*" component={ErrorPage} />
         <Route exact path="/" component={HomePage} />
         <Route path="/login" component={LoginPage} />
+        <Route exact path="*" component={ErrorPage} />
       </Switch>
     </Router>
   );
