@@ -1,6 +1,7 @@
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from "react-router-dom";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import HomePage from "./HomePage/HomePage";
@@ -9,9 +10,11 @@ import LoginPage from "./LoginPage/LoginPage";
 const Webpages = () => {
   return (
     <Router>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/login" component={LoginPage} />
-      <Route path="*" component={ErrorPage} />
+      <Switch>
+        <Route exact path="*" component={ErrorPage} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/login" component={LoginPage} />
+      </Switch>
     </Router>
   );
 };
