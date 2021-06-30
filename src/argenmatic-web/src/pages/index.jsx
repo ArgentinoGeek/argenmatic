@@ -3,6 +3,7 @@ import {
   Route,
   Switch
 } from "react-router-dom";
+import BuilderPage from "./BuilderPage/BuilderPage";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import HomePage from "./HomePage/HomePage";
 import LoginPage from "./LoginPage/LoginPage";
@@ -13,6 +14,7 @@ const Webpages = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/build" component={BuilderPage} />
         <Route exact path="*" component={ErrorPage} />
       </Switch>
     </Router>
