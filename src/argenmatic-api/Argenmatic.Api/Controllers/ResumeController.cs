@@ -20,7 +20,8 @@ namespace Argenmatic.Api.Controllers
         {
             var file = await _mediator.Send(new CreatePdfFromHtmlCommand(htmlContent));
 
-            return File(file, "application/pdf", DateTime.UtcNow.Ticks.ToString());
+            //return File(file, "application/pdf", DateTime.UtcNow.Ticks.ToString());
+            return Ok(file);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Argenmatic.Api
     public class Startup
     {
         private readonly IWebHostEnvironment _env;
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
@@ -40,6 +41,18 @@ namespace Argenmatic.Api
             var wkHtmlToPdfPath = Path.Combine(_env.ContentRootPath, $"wkhtmltox\\v0.12.4\\{architectureFolder}\\libwkhtmltox");
             CustomAssemblyLoadContext context = new CustomAssemblyLoadContext();
             context.LoadUnmanagedLibrary(wkHtmlToPdfPath);
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://localhost:3000",
+                                                          "http://www.contoso.com")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod();
+                                  });
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -79,6 +92,8 @@ namespace Argenmatic.Api
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 

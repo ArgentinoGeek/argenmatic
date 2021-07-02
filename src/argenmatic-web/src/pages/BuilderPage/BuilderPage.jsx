@@ -3,6 +3,8 @@ import styles from './BuilderPage.module.css';
 import FancyNavbar from "../../components/FancyNavbar/FancyNavbar";
 import styled from 'styled-components';
 import EmailEditor from 'react-email-editor';
+import axios from 'axios';
+import { saveAs } from 'file-saver';
 import sample from './sample.json';
 
 const Container = styled.div`
@@ -55,8 +57,46 @@ const BuilderPage = (props) => {
     const exportHtml = () => {
         emailEditorRef.current.editor.exportHtml((data) => {
             const { design, html } = data;
-            console.log('exportHtml', html);
-            alert('Output HTML has been logged in your developer console.');
+            var encodedHtml = html.toString().replace(/"/g, '\\"')
+                .replace(/\r?\n|\r/g, "");
+            console.log('exportHtml', encodedHtml);
+            // alert('Output HTML has been logged in your developer console.');
+        });
+    };
+
+    const downloadPdf = () => {
+        emailEditorRef.current.editor.exportHtml((data) => {
+            const { design, html } = data;
+            // console.log('exportHtml', html);
+
+            var encodedHtml = html.toString().replace(/"/g, '\\"')
+                .replace(/\r?\n|\r/g, "");
+
+            axios.post(`https://localhost:44376/Resume`, JSON.stringify(encodedHtml),
+                {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    responseType: 'arraybuffer'
+                })
+                .then(res => {
+                    const buffer = Buffer.from(res.data, 'base64');
+                    var base64 = btoa(String.fromCharCode.apply(null, buffer));
+                    var fileContent = res.data.toString('base64');
+                    console.log(base64);
+                    var url = "data:application/pdf;base64," + base64;
+                    // console.log(url);
+
+                    window.open(url);
+                    // const file = new Blob([new Uint8Array(res.data)], { type: 'application/pdf' });
+                    // console.log(file);
+
+                    // saveAs(file, 'Resume.pdf');
+                }
+                )
+                .catch(error => {
+                    console.log(error.response)
+                });
         });
     };
 
@@ -81,6 +121,7 @@ const BuilderPage = (props) => {
 
                     <button onClick={saveDesign}>Save Design</button>
                     <button onClick={exportHtml}>Export HTML</button>
+                    <button onClick={downloadPdf}>Download (PDF)</button>
                 </Bar>
 
                 <React.StrictMode>
