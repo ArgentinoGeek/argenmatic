@@ -1,0 +1,21 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+# See https://stackoverflow.com/questions/59434242/asp-net-core-gives-system-net-sockets-socketexception-error-on-heroku for Heroku config 
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
+WORKDIR /app
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
+WORKDIR /src
+COPY ["src/argenmatic-api/Argenmatic.Api/Argenmatic.Api.csproj", "Argenmatic.Api/"]
+RUN dotnet restore "Argenmatic.Api/WebApplication1.csproj"
+COPY /src/api/. .
+WORKDIR "/src/Argenmatic.Api"
+RUN dotnet build "Argenmatic.Api.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Argenmatic.Api.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Argenmatic.Api.dll"]
