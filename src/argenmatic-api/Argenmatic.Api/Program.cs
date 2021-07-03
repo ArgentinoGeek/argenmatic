@@ -39,8 +39,11 @@ namespace Argenmatic.Api
         .UseServiceProviderFactory(new AutofacServiceProviderFactory())
         .ConfigureWebHostDefaults(webBuilder =>
         {
+            var port = Environment.GetEnvironmentVariable("PORT");
+
             webBuilder
                 .UseStartup<Startup>()
+                .UseUrls("http://*:" + port)
                 .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();
