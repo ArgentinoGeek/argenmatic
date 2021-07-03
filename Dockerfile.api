@@ -7,7 +7,7 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["src/argenmatic-api/Argenmatic.Api/Argenmatic.Api.csproj", "Argenmatic.Api/"]
-RUN dotnet restore "Argenmatic.Api/WebApplication1.csproj"
+RUN dotnet restore "Argenmatic.Api/Argenmatic.Api.csproj"
 COPY /src/api/. .
 WORKDIR "/src/Argenmatic.Api"
 RUN dotnet build "Argenmatic.Api.csproj" -c Release -o /app/build
