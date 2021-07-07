@@ -4,6 +4,7 @@ import FancyNavbar from '../../components/FancyNavbar/FancyNavbar';
 import Header from '../../components/Header/Header';
 import JumboButton from '../../components/JumboButton/JumboButton';
 import Card from '../../components/Card/Card';
+import Tier from '../../components/Tier/Tier';
 
 const HomePage = () => {
     useEffect(() => {
@@ -38,11 +39,44 @@ const HomePage = () => {
                 </Card>
         
                 <Card title="Pricing">
-                    <JumboButton
-                        primaryText="Log in"
-                        secondaryText="to save your information"
-                        destinationUrl="/login"
-                        isPrimary={true}
+                    <Tier
+                        title="Tier 1"
+                        features={[
+                            {
+                                featureName:"Download a PDF",
+                                price:"free"
+                            },
+                            {
+                                featureName:"Download an HTML file",
+                                price:"free"
+                            }
+                        ]}
+                    />
+                    <Tier
+                        title="Tier 2"
+                        features={[
+                            {
+                                featureName:"Download a PDF",
+                                price:"free"
+                            },
+                            {
+                                featureName:"Download an HTML file",
+                                price:"free"
+                            }
+                        ]}
+                    />
+                    <Tier
+                        title="Tier 3"
+                        features={[
+                            {
+                                featureName:"Download a PDF",
+                                price:"free"
+                            },
+                            {
+                                featureName:"Download an HTML file",
+                                price:"free"
+                            }
+                        ]}
                     />
                 </Card>
             </div>
